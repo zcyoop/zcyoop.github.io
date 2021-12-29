@@ -176,5 +176,5 @@ ZooKeeper 官方提供的架构图：
 *参看文章*
 
 - [51CTO](https://mp.weixin.qq.com/s?src=11&timestamp=1542088492&ver=1241&signature=dpB23OYaRnNNdROWjRmTEQtCCLKz9L1lIfzvP6DaWV--hqr81oPdOTvl0rrHo4r5rtrroBcZF5UE9jSKQPWe7PG3hhmqqOjPKJZNN-rUPaDEVbraoKL08Jh4cS5YBmWK&new=1)
-- [官方文档](*https://cwiki.apache.org/confluence/display/ZOOKEEPER/Index*)
+- [官方文档](https://cwiki.apache.org/confluence/display/ZOOKEEPER/Index*)
 
