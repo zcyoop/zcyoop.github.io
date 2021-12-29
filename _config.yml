@@ -82,7 +82,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 
+avatar: https://blog-1253533258.cos.ap-shanghai.myqcloud.com/piggo/39327876.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true
