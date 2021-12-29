@@ -1,8 +1,8 @@
 ---
-title:  'Linux - nohup和&的使用说明，"2>1&"含义解释'
+title:  'nohup和&的使用说明'
 date:  2019-6-14
 tags: linux
-categories: [操作系统]
+categories: [操作系统,linux]
 ---
 
 ### 1.nohup和&后台运行
