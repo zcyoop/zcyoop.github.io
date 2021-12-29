@@ -1,16 +1,9 @@
 ---
-layout: post
 title:  'MySQL 中执行计划分析 - Optimizer trace表'
 date:  2021-12-21
 tags: [mysql]
 categories: [数据库]
 ---
-
-
-
-# MySQL 中执行计划分析 - Optimizer trace表
-
-[TOC]
 
 ## 1. 概述
 
