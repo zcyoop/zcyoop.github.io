@@ -3,7 +3,7 @@ layout: post
 title:  'MySQL - MySQL中的索引'
 date:  2021-8-18
 tags: [mysql]
-categories: [数据库]
+categories: [数据库,mysql]
 ---
 
 ## 1. 概述

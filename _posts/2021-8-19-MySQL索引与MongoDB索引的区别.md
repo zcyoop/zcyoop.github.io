@@ -2,7 +2,7 @@
 title:  'MySQL索引与MongoDB索引的区别'
 date:  2021-8-19
 tags: [mysql,mongodb]
-categories: [数据库]
+categories: [数据库,mysql]
 ---
 
 # MySQL索引与MongoDB索引的区别
