@@ -2,7 +2,7 @@
 title: 'MongoDB 在集群模式下Count也真实数据量不一致'
 date: 2020-11-22
 tags: mongodb
-categories: [数据库]
+categories: [数据库,MongoDB]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title:  'Flink - Flink架构概述'
 date:  2020-1-8
 tags: flink
-categories: [大数据框架]
+categories: [大数据框架,flink]
 ---
 
 

@@ -2,7 +2,7 @@
 title:  'Clickhouse 常用命令'
 date:  2020-12-21
 tags: clickhouse
-categories: [数据库]
+categories: [数据库,clickhouse]
 ---
 
 ## 数据表基本操作

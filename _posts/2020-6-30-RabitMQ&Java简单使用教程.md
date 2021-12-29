@@ -3,10 +3,10 @@ layout: post
 title: 'RabitMQ&Java简单使用教程'
 date: 2020-6-30
 tags: rabbitmq java
-categories: [框架,编程语言]
+categories: [框架,rabbitmq]
 ---
 
-## RabitMQ&Java使用说明
+## RabbitMQ&Java使用说明
 
 ### RabbitMQ简介
 

@@ -2,7 +2,7 @@
 title:  'Flink - Flink编程结构'
 date:  2020-1-15
 tags: flink
-categories: [大数据框架]
+categories: [大数据框架,flink]
 ---
 
 ## Flink程序结构
