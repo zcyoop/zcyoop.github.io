@@ -103,3 +103,8 @@ shadowJar {
 }
 ```
 
+### 参考
+
+- [Flink 官网构建文档](https://nightlies.apache.org/flink/flink-docs-master/docs/dev/datastream/project-configuration/#project-configuration)
+- [Shadow官网文档](https://imperceptiblethoughts.com/shadow/getting-started/#getting-started)
+- [阿里镜像仓库](https://developer.aliyun.com/mvn/guide)
