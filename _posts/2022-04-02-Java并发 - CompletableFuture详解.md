@@ -71,8 +71,10 @@ CompletableFuture提供了方法大约有50多个，单纯一个个记忆，是�
 1. 带有Accept开头或者结尾的方法，入口参数是有参数，但是没有返回值
 1. 带有Apply开头或者结尾的方法，入口有参数，有返回值
 1. 带有either后缀的方法，表示谁先完成就消费谁
-# 
-3 CompletableFuture 接口详解
+
+
+# 3  CompletableFuture 接口详解
+
 ## 3.1 提交执行的静态方法
 
 | 方法名 | 描述 |
@@ -223,8 +225,6 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 ```
 可以使用  exceptionally 来处理异常。
 使用 handle() 方法也可以处理异常。但是 handle() 方法的不同之处在于，即使没有发生异常，也会执行。
-
-- 
 
 # 参考
 
