@@ -4,5 +4,28 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+SKILLS：
+- Git
+- Css
+- Yarn
+- Java
+- Html
+- Flink
+- Spark
+- Gradle
+- Spring
+- Python
+- Docker
+- HBase
+- Maven
+- MySQL
+- Hadoop
+- OpenCV
+- YOLOV5
+- FlinkCEP
+- MongoDB
+- JavaScript
+- SpringBoot
+- ClickHouse
+- StreamSets
+- MapReduce
