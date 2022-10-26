@@ -173,28 +173,7 @@ Trigger 接口提供了五个方法来响应不同的事件：
 ## 4.1 默认Trigger
 从window代码结构可以看出，Trigger是一个可选项，那是因为除非Window Assigners不是使用Flink已经定义好的，否则都是会绑定有有默认的Trigger实现类
 
-```mermaid
-classDiagram
-direction BT
-class ContinuousEventTimeTrigger~W~
-class ContinuousProcessingTimeTrigger~W~
-class CountTrigger~W~
-class DeltaTrigger~T, W~
-class EventTimeTrigger
-class ProcessingTimeTrigger
-class ProcessingTimeoutTrigger~T, W~
-class PurgingTrigger~T, W~
-class Trigger~T, W~
-
-ContinuousEventTimeTrigger~W~  -->  Trigger~T, W~ 
-ContinuousProcessingTimeTrigger~W~  -->  Trigger~T, W~ 
-CountTrigger~W~  -->  Trigger~T, W~ 
-DeltaTrigger~T, W~  -->  Trigger~T, W~ 
-EventTimeTrigger  -->  Trigger~T, W~ 
-ProcessingTimeTrigger  -->  Trigger~T, W~ 
-ProcessingTimeoutTrigger~T, W~  -->  Trigger~T, W~ 
-PurgingTrigger~T, W~  -->  Trigger~T, W~ 
-```
+<img src="https://blog-1253533258.cos.ap-shanghai.myqcloud.com/2021-7-11/Snipaste_2022-10-26_19-44-37.png"  />
 
 - EventTimeTrigger：当水印通过窗口末尾时触发的触发器
 - ProcessingTimeTrigger：当系统时间通过窗口末尾时触发的触发器
@@ -358,7 +337,9 @@ Window Assigner、Trigger、Evictor都只是对数据本身、以及触发计算
 ## 6.1 ProcessWindowFunction 
 ReduceFunction、AggregateFunction相对来说比较简单，查看下接口代码就能够很好的理解。
 ProcessWindowFunction其实也比较简单，就是将整个窗口的数据返回给你（windowAll返回所有数据，keyby&window按key返回数据），然后自行对数据进行处理和输出
+
 ```java
+
 DataStream<Tuple2<String, Long>> input = ...;
 
 input
@@ -389,12 +370,19 @@ public class MyProcessWindowFunction
   }
 }
 ```
+
 ProcessWindowFunction还有一个值得区分的概念per-window state，该state可以通过process()中的context获取到。context可以获取到以下两种状态
 
 - globalState()，访问不受window影响的全局 keyed state，与getRuntimeContext().getState()功能一致
 - windowState(), 访问作用域仅限于当前窗口的 keyed state
-## 6.2 增量聚合的 ProcessWindowFunction
+
+
+
+##  6.2 增量聚合的 ProcessWindowFunction
+
 ProcessWindowFunction 可以与 ReduceFunction 或 AggregateFunction 搭配使用， **使其能够在数据到达窗口的时候进行增量聚合。当窗口关闭时，ProcessWindowFunction 将会得到聚合的结果**。这样在AggregateFunction 完成后可以再进一步进行处理。
+
+
 ```java
 DataStream<SensorReading> input = ...;
 
@@ -425,7 +413,9 @@ private static class MyProcessWindowFunction
   }
 }
 ```
+
 p.s. WindowFunction是旧版的ProcessWindowFunction，只能提供更少的环境信息且缺少一些高级的功能，比如 per-window state。
+
 
 # 7. Allowed Lateness VS Watermark
 Allowed Lateness就是字面含义，允许数据迟到的时间，这个概念很容易和Watermark混淆。从Flink WIndow的生命周期来看，一个窗口被完全删除的时间 = 结束时间戳 + 用户定义的 allowed lateness。如果是event time，则是结束时间戳 + watermark +用户定义的 allowed lateness。
@@ -441,6 +431,7 @@ Allowed Lateness就是字面含义，允许数据迟到的时间，这个概念�
 在配置Allowed Lateness之后，还是有可能存在超过配置的数据，如果需要获取到那一部分数据，则需要用到旁侧数据，代码如下
 
 ```java
+
 // 声明标识
 final OutputTag<T> lateOutputTag = new OutputTag<T>("late-data"){};
 
