@@ -435,8 +435,11 @@ Allowed Lateness就是字面含义，允许数据迟到的时间，这个概念�
 - 同样以上面的滑动窗口为例，如果Allowed Lateness为默认值0时，在00:00:13时窗口触发计算并删除，但如果设置Allowed Lateness为5s，则是窗口会在00:00:13后继续等待5s，而在这等待的5s内，每次有数据进来都会再次触发一致窗口函数的计算， 这种触发被称作 late firing，与表示第一次触发窗口的 main firing 相区别。 如果是使用会话窗口的情况，late firing 可能会进一步合并已有的窗口，因为他们可能会连接现有的、未被合并的窗口。
 - 综上，watermark是一个在event-time下的结束标识，而Allowed Lateness 则是允许迟到的最大时间
 
+
+
 ## 7.1 超过Allowed Lateness数据的处理
 在配置Allowed Lateness之后，还是有可能存在超过配置的数据，如果需要获取到那一部分数据，则需要用到旁侧数据，代码如下
+
 ```java
 // 声明标识
 final OutputTag<T> lateOutputTag = new OutputTag<T>("late-data"){};
