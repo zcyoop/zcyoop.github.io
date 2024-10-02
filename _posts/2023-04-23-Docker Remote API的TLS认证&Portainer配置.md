@@ -41,7 +41,7 @@ EMAIL="your email"
 
 CODE="docker_api"
 IP=`curl ip.sb -4`
-COMMON_
+COMMON_NAME="$IP"
 
 # Generate CA key
 openssl genrsa -aes256 -passout "pass:$PASSWORD" -out "ca-key-$CODE.pem" 4096
